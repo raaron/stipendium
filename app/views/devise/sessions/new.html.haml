@@ -1,0 +1,9 @@
+%h2 Anmelden
+= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  %div
+    = f.label :email, 'Email (@Papi: a@b.c)'
+    = f.email_field :email, :autofocus => true
+  %div
+    = f.label :password, 'Passwort (@Papi: asdfasdf)'
+    = f.password_field :password
+  %div= f.submit "Anmelden", :class => 'btn'

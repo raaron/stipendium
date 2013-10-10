@@ -1,0 +1,22 @@
+- if @items.nil?
+  %br
+  %p Benutze die Suchfelder links um die passenden Resultate für deine Bedürfnisse zu erhalten.
+
+- elsif @items == []
+  Kein Treffer gefunden.
+- else
+  - @items.each do |item|
+
+    - if user_signed_in?
+      %a.thumbnail.well{:href => edit_item_path(item)}
+        %h6= item.title
+        %p= "Für Einkommen unter #{item.income} CHF"
+        - if not item.description.empty?
+          %p= item.description[0..200] + ' ...'
+    - else
+      %a.thumbnail.well{:href => item_path(item)}
+        %h6= item.title
+        %p= "Für Einkommen unter #{item.income} CHF"
+        - if not item.description.empty?
+          %p= item.description[0..200] + ' ...'
+

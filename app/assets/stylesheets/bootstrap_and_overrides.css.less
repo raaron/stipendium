@@ -29,3 +29,13 @@
 //
 // Example:
 // @linkColor: #ff0000;
+
+@linkcolour: #007a3f;
+
+.btn-primary {
+  background: @linkcolour;
+  border-color: darken(@linkcolour, 15%);
+  &:hover {
+    background: darken(@linkcolour, 5%);
+  }
+}

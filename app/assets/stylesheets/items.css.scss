@@ -1,0 +1,17 @@
+a  {
+  color: #333333;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+hr {
+  color: black;
+  background-color: black;
+  border: black;
+  height: 1px;
+}
+
+.sidebar {
+  border-color: #007a3f;
+}

@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'haml'
 gem 'sass'
 gem 'devise'
+gem 'faker'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -14,6 +15,7 @@ group :production do
 end
 
 group :development do
+  gem 'html2haml'
   gem 'sqlite3'
 end
 
